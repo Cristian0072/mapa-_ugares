@@ -1,0 +1,19 @@
+name: mapa_lugares
+description: Descripción de tu proyecto
+version: 1.0.0
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  # Otras dependencias que necesites
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+# Opcional: Configuraciones adicionales
+flutter:
+  uses-material-design: true
