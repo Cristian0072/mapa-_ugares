@@ -1,0 +1,29 @@
+name: Dart CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out repository
+      uses: actions/checkout@v4
+
+    - name: Set up Dart
+      uses: dart-lang/setup-dart@v1
+
+    - name: Install dependencies
+      run: |
+        cd .github/workflows  # Ajusta esto a tu ruta correcta
+        dart pub get
+
+    - name: Run tests
+      run: |
+        cd .github/workflows  # Ajusta esto a tu ruta correcta
+        dart test
